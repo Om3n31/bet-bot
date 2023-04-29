@@ -1,0 +1,3 @@
+google-api-core
+discord.py
+google-api-python-client
