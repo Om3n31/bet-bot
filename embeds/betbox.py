@@ -25,6 +25,6 @@ class BetBox(Embed):
     async def update(self):
         await self.message.edit(embed=self)
         
-    async def add_resolve_field(self, ctx: Context, claim: Claim):
-        self.add_field(name=f"{ctx.author.nick} resolved the bet:", value=f"```{claim.owner.user.nick}: {claim.claim_text}```", inline=False)
+    async def add_resolve_field(self, resolver: str, claim: Claim):
+        self.add_field(name=f"{resolver} resolved the bet:", value=f"```{claim.owner.user.nick}: {claim.claim_text}```", inline=False)
         self.update()

@@ -22,9 +22,11 @@ class LiveBet:
     thread: str
     is_resolved: bool
     is_searched: bool
+    winning_claim: int
+    pot: float
     
     def __init__(self, ctx: Context, thread: str):
-        hash_id = generate_hash(7)
+        hash_id = generate_hash(8)
         self.creator_id = ctx.author.id
         self.claims = []
         self.betting_users = []
@@ -38,6 +40,8 @@ class LiveBet:
         self.minor_bettor_modifier = 20
         self.bet_box = {}
         self.vote_box = {}
+        self.winning_claim = None
+        self.pot = 0.
     
     async def add_claim(self, claim_text: str, amount: float, betting_user: BettingUser) -> bool:
         if self.claim_count < 9:
@@ -94,3 +98,6 @@ class LiveBet:
             
     def get_claim(self, claim_id: int) -> Claim:
         return self.claims[claim_id]
+    
+    def set_pot(self, amount: float):
+        self.pot = amount

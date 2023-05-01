@@ -1,7 +1,6 @@
 import json
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-from tools.config import *
 from typing import List, Dict
 
 

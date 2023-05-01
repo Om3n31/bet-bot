@@ -1,6 +1,5 @@
 from typing import List, Dict
 from livebet import LiveBet
-from tools.tools import generate_hash
 
 class Bank:
     _instance = None
@@ -26,6 +25,12 @@ class Bank:
     
     def get_bet_id_from_message_id(self, message_id: int) -> str:
         return self.message_id_bet_id[message_id]
+    
+    def init_balance(self, id: int, amount: float):
+        self.balances[id] = amount
+        
+    def add_to_balance(self, id: int, amount: float):
+        self.balances[id] += amount
     
     def register_bet(self, bet: LiveBet) -> str:
         self.bets[bet.id] = bet

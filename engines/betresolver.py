@@ -20,14 +20,18 @@ class BetResolver:
         return max(self.claims, key=lambda claim: claim.vote_weight).id
         
     def resolve(self, winner_claim_id: int) -> bool:
+        balances = Bank().balances
         claim = self.claims[winner_claim_id]
         if claim:
             if len(claim.minor_bettors) > 0:
                 for minor_bettor in claim.minor_bettors:
-                    self.bank.balances[minor_bettor] += (claim.minor_amount) + self.get_resolution_minor_gains(claim)
-                self.bank.balances[claim.owner.id] += (claim.original_pot) + self.get_resolution_major_gains(claim)
+                    balances[minor_bettor] = (claim.minor_amount) + self.get_resolution_minor_gains(claim)
+                    #self.bank.add_to_balance(minor_bettor, amount)
+                balances[claim.owner.id] = (claim.original_pot) + self.get_resolution_major_gains(claim)
+                #self.bank.add_to_balance(claim.owner.id, amount)
                 return True
-            self.bank.balances[claim.owner.id] += self.get_pot()
+            balances[claim.owner.id] = self.get_pot()
+            #self.bank.add_to_balance(claim.owner.id, self.get_pot())
             return True
         return False
     

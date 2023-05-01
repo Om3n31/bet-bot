@@ -1,27 +1,31 @@
 import discord
-import tools.config as config
+import os
+from dotenv import load_dotenv
 from livebet import LiveBet
 from bettinguser import *
 from discord.ext import commands
+from discord import app_commands
 from discord.ext.commands import Context
-from discord import Embed, Message, Member, Reaction, RawReactionActionEvent
+from discord import Message, Member, Reaction, RawReactionActionEvent
 from typing import List, Dict
 from engines.bank import Bank
 from tools.tools import *
 from tools.emojis import *
-from tools.config import *
+from config import *
 from engines.betresolver import BetResolver
-from engines.factchecker import FactChecker
 from engines.googlelimiter import Counter
+from engines.database import Database
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = commands.Bot(command_prefix='!', intents=intents, token=config.TOKEN)
+bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 #Liliane Bet-en-cours
 # define a dictionary to store user balances
 bank = Bank()
+load_dotenv()
 google_api_limiter = Counter()
 BOT_ID = None
+user_cache: List[int] = []
 
 # define a list to store betting history
 bet_history: List[Dict[int, LiveBet]] = {}
@@ -29,8 +33,12 @@ bet_history: List[Dict[int, LiveBet]] = {}
 @bot.event
 async def on_ready():
     channel = bot.get_channel(TESTING_CH_GENERAL)
-    message = await channel.send(f'{BOT_NAME} is running.')
-    set_bot_id(message.author.id)
+    try:
+        await bot.tree.sync()
+        message = await channel.send(f'{BOT_NAME} is running.')
+        set_bot_id(message.author.id)
+    except Exception as e:
+        print(e)
 
 def set_bot_id(id: int):
     global BOT_ID
@@ -38,7 +46,7 @@ def set_bot_id(id: int):
 
 def init_balance(user: Member):
     if user.id not in bank.balances:
-        bank.balances[user.id] = float(INIT_BALANCE)
+        bank.init_balance(user.id, float(INIT_BALANCE))
     
 @bot.command(name='balance')
 async def balance(ctx: Context):
@@ -53,7 +61,8 @@ async def balance(ctx: Context):
     member_balance = bank.balances[ctx.author.id]
     await ctx.channel.send(f'Your balance is {member_balance}')
 
-@bot.command(name='bet')
+@bot.tree.command(name="bet")
+@app_commands.describe(arg="test")
 async def bet(ctx: Context):
     bet = await make_bet_out_of_context(ctx)
     mentions = ctx.message.mentions
@@ -63,7 +72,7 @@ async def bet(ctx: Context):
             if user.id not in bet.betting_users:
                 bet.add_main_bettor(user)
     bank.register_bet(bet)
-    
+
 @bot.command(name='resolve')
 async def resolve(ctx: Context):
     message = ctx.message
@@ -76,15 +85,20 @@ async def resolve(ctx: Context):
     if message.reference is None or message.reference.resolved.author.name != BOT_NAME:
         return
     
-    #HERE ADD START OF VOTED RESOLVE
+    #HERE WE NEED OPTION OF AUTHOR BEING THE VOTE, OR ADMIN RESOLVE
     if original_bet.creator_id == message.author.id:
-        resolve_claim_id = int(get_content_from_message(message, False))
-        if BetResolver(original_bet.claims).resolve(resolve_claim_id):
-            original_bet.bet_box.add_resolve_field(ctx, original_bet.get_claim(resolve_claim_id))
-            return
+        resolve_claim_id = int(get_content_from_message(message, False)) - 1
+        await register_resolved_bet(original_bet, resolve_claim_id)
+        await original_bet.bet_box.add_resolve_field('A vote', original_bet.get_claim(resolve_claim_id))
         return
     await message.add_reaction(X_REACTION)
-    
+
+async def register_resolved_bet(bet: LiveBet, winning_claim_id: int):
+    betResolver = BetResolver(bet.claims)
+    if betResolver.resolve(winning_claim_id):
+        bet.set_pot(betResolver.get_pot())
+        bet.winning_claim = winning_claim_id
+        await Database().insert_bet(bet)
 
 @bot.command(name='vote')
 async def vote(ctx: Context):
@@ -177,6 +191,12 @@ async def numerical_reaction_handle(reaction: Reaction, user: Member):
 
 @bot.event
 async def on_message(message: Message):
+    print(message.author.id not in user_cache)
+    print(message.author.id != BOT_ID)
+    print(BOT_ID)
+    if message.author.id not in user_cache and message.author.name != BOT_NAME:
+        await Database().insert_user(message.author)
+        user_cache.append(message.author.id)
     init_balance(message.author)
     if len(message.content) > 0 and message.content[0] == '!':
         await bot.process_commands(message)
@@ -228,4 +248,4 @@ async def on_raw_reaction_remove(event: RawReactionActionEvent):
                 bet.remove_minor_bettor(betting_user, index)
                 bank.balances[betting_user.id] =+ bet.get_claim(index).minor_amount
 
-bot.run(token=config.TOKEN)
+bot.run(token=os.getenv('TOKEN'))
