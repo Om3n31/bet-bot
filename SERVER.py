@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 from livebet import LiveBet
 from bettinguser import *
 from discord.ext import commands
-from discord import app_commands
 from discord.ext.commands import Context
+from discord import app_commands
 from discord import Message, Member, Reaction, RawReactionActionEvent
 from typing import List, Dict
 from engines.bank import Bank
@@ -15,6 +15,12 @@ from config import *
 from engines.betresolver import BetResolver
 from engines.googlelimiter import Counter
 from engines.database import Database
+from embeds.votebox_vote import VoteBoxVote
+from strategies.vote_strategies.punish_strategy import PunishStrategy
+from strategies.vote_strategies.grace_strategy import GraceStrategy
+from strategies.reaction_strategies.binary_vote_strategy import BinaryVoteReactionStrategy
+
+from vote import Vote
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -25,6 +31,7 @@ bank = Bank()
 load_dotenv()
 google_api_limiter = Counter()
 BOT_ID = None
+INIT = True
 user_cache: List[int] = []
 
 # define a list to store betting history
@@ -34,7 +41,8 @@ bet_history: List[Dict[int, LiveBet]] = {}
 async def on_ready():
     channel = bot.get_channel(TESTING_CH_GENERAL)
     try:
-        await bot.tree.sync()
+        if INIT:
+            await bot.tree.sync()
         message = await channel.send(f'{BOT_NAME} is running.')
         set_bot_id(message.author.id)
     except Exception as e:
@@ -47,9 +55,9 @@ def set_bot_id(id: int):
 def init_balance(user: Member):
     if user.id not in bank.balances:
         bank.init_balance(user.id, float(INIT_BALANCE))
-    
+        
 @bot.command(name='balance')
-async def balance(ctx: Context):
+async def balance(ctx: discord.Interaction):
     mentions = ctx.message.mentions
     if mentions:
         for mention in mentions:
@@ -57,24 +65,32 @@ async def balance(ctx: Context):
             member_balance = bank.balances[mention.id]
             await ctx.channel.send(f'{mention.name}\'s balance is {member_balance}')
         return
-    init_balance(ctx.author)
-    member_balance = bank.balances[ctx.author.id]
+    init_balance(ctx.user)
+    member_balance = bank.balances[ctx.user.id]
     await ctx.channel.send(f'Your balance is {member_balance}')
 
 @bot.tree.command(name="bet")
-@app_commands.describe(arg="test")
-async def bet(ctx: Context):
-    bet = await make_bet_out_of_context(ctx)
-    mentions = ctx.message.mentions
-    if mentions:
+async def bet(interaction: discord.Interaction, thread: str, users: str = None):
+    bet = await make_bet_out_of_context(interaction)
+    mentions = interaction_to_mentions(interaction)
+    if len(mentions) > 0:
         for user in mentions:
             init_balance(user)
             if user.id not in bet.betting_users:
-                bet.add_main_bettor(user)
+                betting_user = BettingUserFromMember(user)
+                bet.add_main_bettor(betting_user)
     bank.register_bet(bet)
 
+def interaction_to_mentions(interaction: discord.Interaction) -> List[Member]:
+    try:
+        users = next((option for option in interaction.data.get('options') if option['name'] == 'users'), None)['value'].split(' ')
+        members = [discord.utils.get(interaction.guild.members, mention=user) for user in users]
+        return members
+    except Exception as e:
+        print(e)
+
 @bot.command(name='resolve')
-async def resolve(ctx: Context):
+async def resolve(ctx: discord.Interaction):
     message = ctx.message
     original_bet = get_bet_from_reply(message)
     
@@ -100,41 +116,51 @@ async def register_resolved_bet(bet: LiveBet, winning_claim_id: int):
         bet.winning_claim = winning_claim_id
         await Database().insert_bet(bet)
 
-@bot.command(name='vote')
-async def vote(ctx: Context):
-    message = get_content_from_message(ctx.message, False)
-    tokens = message.split(' ')
-    if tokens[0] == 'resolve':
-        
+@bot.tree.command(name='vote')
+async def vote(interaction: discord.Interaction, topic: str, users: str = '', amount: str = ''):
+    if topic == 'resolve':
+        print(topic)
         return
-    if tokens[0] == 'punish':
-        try:
-            amount = float(tokens[1])
-            for mention in ctx.message.mentions:
-                bank.balances[mention.id] -= amount
-                await ctx.message.add_reaction()
-            
-        except Exception as e:
-            await ctx.message.add_reaction(POOP_REACTION)
+    if topic == 'punish':
+        vote = Vote(vote_strategy=PunishStrategy(interaction), votebox=VoteBoxVote())
+        await vote.vote_box.set_content(vote.vote_strategy)
+        await vote.vote_box.print(interaction.channel)
+        await vote.vote_box.add_vote_slot()
+        amount = float(amount)
+        await vote.vote_strategy.exec()
         return
     
-    if tokens[0] == 'grace':
+    if topic == 'grace':
         
         return
     
-    if tokens[0] == 'cancel':
+    if topic == 'cancel':
         
         return
     pass
+    
+@bot.tree.command(name='punish')
+async def punish(interaction: discord.Interaction, users: str, amount: str):
+    vote = Vote(vote_strategy=PunishStrategy(interaction), votebox=VoteBoxVote())
+    await vote.vote_box.set_content(vote.vote_strategy, interaction.channel)
+    await vote.vote_box.add_vote_slot()
+    bank.register_vote(vote, vote.vote_box.message.id)
+   
+@bot.tree.command(name='grace')
+async def grace(interaction: discord.Interaction, users: str, amount: str):
+    vote = Vote(vote_strategy=GraceStrategy(interaction), votebox=VoteBoxVote())
+    await vote.vote_box.set_content(vote.vote_strategy, interaction.channel)
+    await vote.vote_box.add_vote_slot()
+    bank.register_vote(vote, vote.vote_box.message.id)
     
 def add_to_balance(user_id: int, amount: float):
     bank.balances[user_id] += amount
     return
 
-async def make_bet_out_of_context(ctx: Context) -> LiveBet:
-    message = get_content_from_message(ctx.message, False)
-    bet = LiveBet(ctx, message)
-    await bet.init_boxes(ctx)
+async def make_bet_out_of_context(interaction: discord.Interaction) -> LiveBet:
+    thread = next((option for option in interaction.data.get("options") if option['name'] == 'thread'), None)["value"]
+    bet = LiveBet(interaction.user.id, thread)
+    await bet.init_boxes(interaction) #NEED CONTEXT TO PRINT BOX
     return bet
 
 async def claim_from_reply(message: Message):
@@ -151,7 +177,7 @@ async def claim_from_reply(message: Message):
         if user_id in bet.betting_users:
             await message.add_reaction(X_REACTION)
             return
-        if amount > bank.balances[user.id]:
+        if amount > bank.balances[user.id]: #TODO USE THIS AS CACHE
             await message.add_reaction(X_REACTION)
             await message.channel.send(f"You're too poor, {user.nick}.")
             return
@@ -191,9 +217,6 @@ async def numerical_reaction_handle(reaction: Reaction, user: Member):
 
 @bot.event
 async def on_message(message: Message):
-    print(message.author.id not in user_cache)
-    print(message.author.id != BOT_ID)
-    print(BOT_ID)
     if message.author.id not in user_cache and message.author.name != BOT_NAME:
         await Database().insert_user(message.author)
         user_cache.append(message.author.id)
@@ -209,7 +232,7 @@ async def on_message(message: Message):
     bot.process_commands(message)
     
 @bot.event
-async def on_command_error(ctx: Context, error):
+async def on_command_error(ctx: discord.Interaction, error):
     if isinstance(error, commands.errors.UserInputError):
         await ctx.message.add_reaction(POOP_REACTION)
         if ctx.command.name == 'bet':

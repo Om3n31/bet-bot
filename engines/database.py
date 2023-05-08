@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from pymongo.collection import Collection
 from livebet import LiveBet
 from discord import Member
 from bettinguser import BettingUser
@@ -37,6 +38,21 @@ class Database:
             'wins': 0,
             'losses': 0
         }
+    
+    def get_collection(self, collection: str) -> Collection:
+        return self.get_conn()['bet-bot'][collection]
+        
+    def update_user_balance(self, user: Member, amount: float):
+        try:
+            mongo = self.get_conn()
+            usr = mongo['bet-bot']['users'].find_one({'id': user.id})
+            balance = float(usr.balance)
+            if user:
+                mongo['bet-bot']['users'].update_one({'id':f'{user.id}'}, {'$set': {'balance':f'{balance + amount}'}})
+        except Exception as e:
+            print(e)
+        pass
+    
     def bet_to_document(self, bet: LiveBet) -> Dict:
         claims = []
         for claim in bet.claims:

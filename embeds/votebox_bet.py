@@ -1,7 +1,6 @@
-from discord import Embed, Message
-from discord.ext.commands import Context
+from discord import Embed, Message, Interaction, TextChannel
 from tools.emojis import *
-from typing import Dict
+from typing import Dict, Union
 from engines.googlelimiter import Counter
 
 class VoteBox(Embed):
@@ -12,8 +11,8 @@ class VoteBox(Embed):
         self.bet_id = bet_id
         self.set_footer(text=f"You can vote for a claim under this box.")
 
-    async def print(self, ctx: Context):
-        message = await ctx.channel.send(embed=self)
+    async def print(self, channel: TextChannel):
+        message = await channel.send(embed=self)
         self.message = message
     
     async def post_claim_footer(self):

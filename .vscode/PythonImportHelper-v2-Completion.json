@@ -1,0 +1,1615 @@
+[
+    {
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Embed",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Interaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "TextChannel",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Embed",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Interaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "TextChannel",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Embed",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Interaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "TextChannel",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Reaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Reaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Reaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Reaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Interaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Interaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Interaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "app_commands",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Reaction",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "RawReactionActionEvent",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Context",
+        "importPath": "discord.ext.commands",
+        "description": "discord.ext.commands",
+        "isExtraImport": true,
+        "detail": "discord.ext.commands",
+        "documentation": {}
+    },
+    {
+        "label": "Context",
+        "importPath": "discord.ext.commands",
+        "description": "discord.ext.commands",
+        "isExtraImport": true,
+        "detail": "discord.ext.commands",
+        "documentation": {}
+    },
+    {
+        "label": "Context",
+        "importPath": "discord.ext.commands",
+        "description": "discord.ext.commands",
+        "isExtraImport": true,
+        "detail": "discord.ext.commands",
+        "documentation": {}
+    },
+    {
+        "label": "Claim",
+        "importPath": "claim",
+        "description": "claim",
+        "isExtraImport": true,
+        "detail": "claim",
+        "documentation": {}
+    },
+    {
+        "label": "Claim",
+        "importPath": "claim",
+        "description": "claim",
+        "isExtraImport": true,
+        "detail": "claim",
+        "documentation": {}
+    },
+    {
+        "label": "Claim",
+        "importPath": "claim",
+        "description": "claim",
+        "isExtraImport": true,
+        "detail": "claim",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "isExtraImport": true,
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "isExtraImport": true,
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "isExtraImport": true,
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "isExtraImport": true,
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "isExtraImport": true,
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "isExtraImport": true,
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "engines.googlelimiter",
+        "description": "engines.googlelimiter",
+        "isExtraImport": true,
+        "detail": "engines.googlelimiter",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "engines.googlelimiter",
+        "description": "engines.googlelimiter",
+        "isExtraImport": true,
+        "detail": "engines.googlelimiter",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "engines.googlelimiter",
+        "description": "engines.googlelimiter",
+        "isExtraImport": true,
+        "detail": "engines.googlelimiter",
+        "documentation": {}
+    },
+    {
+        "label": "VoteStrategyInterface",
+        "importPath": "interfaces.vote_strategy_interface",
+        "description": "interfaces.vote_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.vote_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "VoteStrategyInterface",
+        "importPath": "interfaces.vote_strategy_interface",
+        "description": "interfaces.vote_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.vote_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "VoteStrategyInterface",
+        "importPath": "interfaces.vote_strategy_interface",
+        "description": "interfaces.vote_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.vote_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "VoteStrategyInterface",
+        "importPath": "interfaces.vote_strategy_interface",
+        "description": "interfaces.vote_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.vote_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "VoteStrategyInterface",
+        "importPath": "interfaces.vote_strategy_interface",
+        "description": "interfaces.vote_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.vote_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "LiveBet",
+        "importPath": "livebet",
+        "description": "livebet",
+        "isExtraImport": true,
+        "detail": "livebet",
+        "documentation": {}
+    },
+    {
+        "label": "LiveBet",
+        "importPath": "livebet",
+        "description": "livebet",
+        "isExtraImport": true,
+        "detail": "livebet",
+        "documentation": {}
+    },
+    {
+        "label": "LiveBet",
+        "importPath": "livebet",
+        "description": "livebet",
+        "isExtraImport": true,
+        "detail": "livebet",
+        "documentation": {}
+    },
+    {
+        "label": "LiveBet",
+        "importPath": "livebet",
+        "description": "livebet",
+        "isExtraImport": true,
+        "detail": "livebet",
+        "documentation": {}
+    },
+    {
+        "label": "Vote",
+        "importPath": "vote",
+        "description": "vote",
+        "isExtraImport": true,
+        "detail": "vote",
+        "documentation": {}
+    },
+    {
+        "label": "Vote",
+        "importPath": "vote",
+        "description": "vote",
+        "isExtraImport": true,
+        "detail": "vote",
+        "documentation": {}
+    },
+    {
+        "label": "Vote",
+        "importPath": "vote",
+        "description": "vote",
+        "isExtraImport": true,
+        "detail": "vote",
+        "documentation": {}
+    },
+    {
+        "label": "Vote",
+        "importPath": "vote",
+        "description": "vote",
+        "isExtraImport": true,
+        "detail": "vote",
+        "documentation": {}
+    },
+    {
+        "label": "Vote",
+        "importPath": "vote",
+        "description": "vote",
+        "isExtraImport": true,
+        "detail": "vote",
+        "documentation": {}
+    },
+    {
+        "label": "ReactionStrategyInterface",
+        "importPath": "interfaces.reaction_strategy_interface",
+        "description": "interfaces.reaction_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.reaction_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "ReactionStrategyInterface",
+        "importPath": "interfaces.reaction_strategy_interface",
+        "description": "interfaces.reaction_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.reaction_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "ReactionStrategyInterface",
+        "importPath": "interfaces.reaction_strategy_interface",
+        "description": "interfaces.reaction_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.reaction_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "ReactionStrategyInterface",
+        "importPath": "interfaces.reaction_strategy_interface",
+        "description": "interfaces.reaction_strategy_interface",
+        "isExtraImport": true,
+        "detail": "interfaces.reaction_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "Bank",
+        "importPath": "engines.bank",
+        "description": "engines.bank",
+        "isExtraImport": true,
+        "detail": "engines.bank",
+        "documentation": {}
+    },
+    {
+        "label": "Bank",
+        "importPath": "engines.bank",
+        "description": "engines.bank",
+        "isExtraImport": true,
+        "detail": "engines.bank",
+        "documentation": {}
+    },
+    {
+        "label": "Bank",
+        "importPath": "engines.bank",
+        "description": "engines.bank",
+        "isExtraImport": true,
+        "detail": "engines.bank",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "Collection",
+        "importPath": "pymongo.collection",
+        "description": "pymongo.collection",
+        "isExtraImport": true,
+        "detail": "pymongo.collection",
+        "documentation": {}
+    },
+    {
+        "label": "BettingUser",
+        "importPath": "bettinguser",
+        "description": "bettinguser",
+        "isExtraImport": true,
+        "detail": "bettinguser",
+        "documentation": {}
+    },
+    {
+        "label": "BettingUser",
+        "importPath": "bettinguser",
+        "description": "bettinguser",
+        "isExtraImport": true,
+        "detail": "bettinguser",
+        "documentation": {}
+    },
+    {
+        "label": "BettingUser",
+        "importPath": "bettinguser",
+        "description": "bettinguser",
+        "isExtraImport": true,
+        "detail": "bettinguser",
+        "documentation": {}
+    },
+    {
+        "label": "BettingUser",
+        "importPath": "bettinguser",
+        "description": "bettinguser",
+        "isExtraImport": true,
+        "detail": "bettinguser",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "bettinguser",
+        "description": "bettinguser",
+        "isExtraImport": true,
+        "detail": "bettinguser",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "HttpError",
+        "importPath": "googleapiclient.errors",
+        "description": "googleapiclient.errors",
+        "isExtraImport": true,
+        "detail": "googleapiclient.errors",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "engines.database",
+        "description": "engines.database",
+        "isExtraImport": true,
+        "detail": "engines.database",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "engines.database",
+        "description": "engines.database",
+        "isExtraImport": true,
+        "detail": "engines.database",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "engines.database",
+        "description": "engines.database",
+        "isExtraImport": true,
+        "detail": "engines.database",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "engines.database",
+        "description": "engines.database",
+        "isExtraImport": true,
+        "detail": "engines.database",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "ReactableInterface",
+        "importPath": "interfaces.reactable_interace",
+        "description": "interfaces.reactable_interace",
+        "isExtraImport": true,
+        "detail": "interfaces.reactable_interace",
+        "documentation": {}
+    },
+    {
+        "label": "secrets",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "secrets",
+        "description": "secrets",
+        "detail": "secrets",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "BetBox",
+        "importPath": "embeds.betbox",
+        "description": "embeds.betbox",
+        "isExtraImport": true,
+        "detail": "embeds.betbox",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBox",
+        "importPath": "embeds.votebox_bet",
+        "description": "embeds.votebox_bet",
+        "isExtraImport": true,
+        "detail": "embeds.votebox_bet",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.tools",
+        "description": "tools.tools",
+        "isExtraImport": true,
+        "detail": "tools.tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.tools",
+        "description": "tools.tools",
+        "isExtraImport": true,
+        "detail": "tools.tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.tools",
+        "description": "tools.tools",
+        "isExtraImport": true,
+        "detail": "tools.tools",
+        "documentation": {}
+    },
+    {
+        "label": "FactChecker",
+        "importPath": "engines.factchecker",
+        "description": "engines.factchecker",
+        "isExtraImport": true,
+        "detail": "engines.factchecker",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "BetResolver",
+        "importPath": "engines.betresolver",
+        "description": "engines.betresolver",
+        "isExtraImport": true,
+        "detail": "engines.betresolver",
+        "documentation": {}
+    },
+    {
+        "label": "PunishStrategy",
+        "importPath": "strategies.vote_strategies.punish_strategy",
+        "description": "strategies.vote_strategies.punish_strategy",
+        "isExtraImport": true,
+        "detail": "strategies.vote_strategies.punish_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "GraceStrategy",
+        "importPath": "strategies.vote_strategies.grace_strategy",
+        "description": "strategies.vote_strategies.grace_strategy",
+        "isExtraImport": true,
+        "detail": "strategies.vote_strategies.grace_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "BinaryVoteReactionStrategy",
+        "importPath": "strategies.reaction_strategies.binary_vote_strategy",
+        "description": "strategies.reaction_strategies.binary_vote_strategy",
+        "isExtraImport": true,
+        "detail": "strategies.reaction_strategies.binary_vote_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "BetBox",
+        "kind": 6,
+        "importPath": "embeds.betbox",
+        "description": "embeds.betbox",
+        "peekOfCode": "class BetBox(Embed):\n    bet_id: str\n    message: Message\n    def __init__(self, author_nick: str, bet_id: str, thread: str):\n        super().__init__(title=f\"\", description=f\"\", color=0xd4af37)\n        self.bet_id = bet_id\n        self.add_field(name=f\"@{author_nick} started a new bet:\", value=f\"```{thread}\\n```\", inline=False)\n    async def add_claim(self, claim_id: int, user_name: str, amount: float, claim_text: str):\n        self.add_field(name=\"\", value=f\"```{claim_id+1} - {user_name} for {amount}\\n{claim_text}```\", inline=False)\n        await self.update()",
+        "detail": "embeds.betbox",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBox",
+        "kind": 6,
+        "importPath": "embeds.votebox_bet",
+        "description": "embeds.votebox_bet",
+        "peekOfCode": "class VoteBox(Embed):\n    bet_id: str\n    message: Message\n    def __init__(self, bet_id: str):\n        super().__init__(title=\"\", description=f\"\", color=0x36393F)\n        self.bet_id = bet_id\n        self.set_footer(text=f\"You can vote for a claim under this box.\")\n    async def print(self, channel: TextChannel):\n        message = await channel.send(embed=self)\n        self.message = message",
+        "detail": "embeds.votebox_bet",
+        "documentation": {}
+    },
+    {
+        "label": "VoteBoxVote",
+        "kind": 6,
+        "importPath": "embeds.votebox_vote",
+        "description": "embeds.votebox_vote",
+        "peekOfCode": "class VoteBoxVote(Embed):\n    def __init__(self):\n        super().__init__(title=\"\", description=f\"\", color=0x36393F)\n        self.set_footer(text=f\"Vote under this box.\")\n    async def print(self, channel: TextChannel):\n        message = await channel.send(embed=self)\n        self.message = message\n    async def set_content(self, vote: VoteStrategyInterface, channel: TextChannel):\n        self.add_field(name=vote.vote_topic(), value=vote.vote_content())\n        await self.print(channel)",
+        "detail": "embeds.votebox_vote",
+        "documentation": {}
+    },
+    {
+        "label": "Bank",
+        "kind": 6,
+        "importPath": "engines.bank",
+        "description": "engines.bank",
+        "peekOfCode": "class Bank:\n    _instance = None\n    balances: List[Dict[int, float]]\n    bets: List[Dict[str, LiveBet]]\n    message_id_bet_id: List[Dict[int, str]]\n    votes: List[Dict[int, Vote]]\n    votebox_message_id: List[int]\n    reaction_strategies: Dict[int, ReactionStrategyInterface]\n    def __init__(self):\n        self.balances = {}",
+        "detail": "engines.bank",
+        "documentation": {}
+    },
+    {
+        "label": "BetResolver",
+        "kind": 6,
+        "importPath": "engines.betresolver",
+        "description": "engines.betresolver",
+        "peekOfCode": "class BetResolver:\n    main_bettor_modifier: int\n    minor_bettor_modifier: int\n    bank: Bank\n    claims: List[Claim]\n    winner_claim_id: int\n    def __init__(self, claims: List[Claim]):\n        self.main_bettor_modifier = 120\n        self.minor_bettor_modifier = 20\n        self.bank = Bank()",
+        "detail": "engines.betresolver",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "kind": 6,
+        "importPath": "engines.database",
+        "description": "engines.database",
+        "peekOfCode": "class Database:\n    mongo_uri: str\n    def __init__(self) -> None:\n        self.mongo_uri = os.getenv('MONGO_URI')\n        pass\n    async def insert_user(self, user: BettingUser):\n        mongo = self.get_conn()\n        if not mongo['bet-bot']['users'].find_one({'id': user.id}):\n           mongo['bet-bot']['users'].insert_one(self.user_to_document(user))\n        mongo.close()",
+        "detail": "engines.database",
+        "documentation": {}
+    },
+    {
+        "label": "FactChecker",
+        "kind": 6,
+        "importPath": "engines.factchecker",
+        "description": "engines.factchecker",
+        "peekOfCode": "class FactChecker():\n    _instance = None\n    def __init__(self):\n        pass\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n    def check(self, thread: str) -> str:\n        try:",
+        "detail": "engines.factchecker",
+        "documentation": {}
+    },
+    {
+        "label": "API_ERROR",
+        "kind": 5,
+        "importPath": "engines.factchecker",
+        "description": "engines.factchecker",
+        "peekOfCode": "API_ERROR = \"There was an issue with fetching claims for your query.\"\nclass FactChecker():\n    _instance = None\n    def __init__(self):\n        pass\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n    def check(self, thread: str) -> str:",
+        "detail": "engines.factchecker",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "kind": 6,
+        "importPath": "engines.googlelimiter",
+        "description": "engines.googlelimiter",
+        "peekOfCode": "class Counter:\n    _instance = None\n    def __init__(self):\n        self.data = []\n        self.filename = os.path.join(os.getcwd(), \"data\",\"query_counter.json\")\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n    def can_search_google(self) -> bool:",
+        "detail": "engines.googlelimiter",
+        "documentation": {}
+    },
+    {
+        "label": "ReactableInterface",
+        "kind": 6,
+        "importPath": "interfaces.reactable_interace",
+        "description": "interfaces.reactable_interace",
+        "peekOfCode": "class ReactableInterface(ABC):\n    @abstractmethod\n    def can_react(self) -> bool:\n        pass\n    @abstractmethod\n    def add_reaction(self):\n        pass\n    @abstractmethod\n    def remove_reaction(self):\n        pass",
+        "detail": "interfaces.reactable_interace",
+        "documentation": {}
+    },
+    {
+        "label": "ReactionStrategyInterface",
+        "kind": 6,
+        "importPath": "interfaces.reaction_strategy_interface",
+        "description": "interfaces.reaction_strategy_interface",
+        "peekOfCode": "class ReactionStrategyInterface(ABC):\n    @abstractmethod\n    async def add_reaction(self):\n        pass\n    @abstractmethod\n    async def remove_reaction(self):\n        pass",
+        "detail": "interfaces.reaction_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "VoteStrategyInterface",
+        "kind": 6,
+        "importPath": "interfaces.vote_strategy_interface",
+        "description": "interfaces.vote_strategy_interface",
+        "peekOfCode": "class VoteStrategyInterface(ABC):\n    @abstractmethod\n    def vote_owner(self) -> Member:\n        pass\n    @abstractmethod\n    def vote_mentions(self) -> List[Member] | None:\n        pass\n    @abstractmethod\n    def vote_topic(self) -> str:\n        pass",
+        "detail": "interfaces.vote_strategy_interface",
+        "documentation": {}
+    },
+    {
+        "label": "BetBoxReactable",
+        "kind": 6,
+        "importPath": "reactables.betbox_reactable",
+        "description": "reactables.betbox_reactable",
+        "peekOfCode": "class BetBoxReactable(ReactableInterface):\n    bet: LiveBet\n    def __init__(self, bet: LiveBet):\n        self.bet = bet\n        pass\n    def can_react(self, reaction: Reaction, user: Member):\n        bet = Bank().get_bet_from_message_id(reaction.message.id)\n        if bet.is_resolved or user.id in bet.betting_users:\n            return False\n        return True",
+        "detail": "reactables.betbox_reactable",
+        "documentation": {}
+    },
+    {
+        "label": "BinaryVoteReactionStrategy",
+        "kind": 6,
+        "importPath": "strategies.reaction_strategies.binary_vote_strategy",
+        "description": "strategies.reaction_strategies.binary_vote_strategy",
+        "peekOfCode": "class BinaryVoteReactionStrategy(ReactionStrategyInterface):\n    vote: Vote\n    reaction: Reaction\n    user: Member\n    def __init__(self, vote: Vote, reaction: Reaction, user: Member):\n        self.vote = vote\n        self.reaction = reaction\n        self.user = user\n    async def add_reaction(self):\n        if self.reaction.emoji == YES_REACTION:",
+        "detail": "strategies.reaction_strategies.binary_vote_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "MinorBetReactionStrategy",
+        "kind": 6,
+        "importPath": "strategies.reaction_strategies.minor_bet_strategy",
+        "description": "strategies.reaction_strategies.minor_bet_strategy",
+        "peekOfCode": "class MinorBetReactionStrategy(ReactionStrategyInterface):\n    vote: Vote\n    reaction: Reaction\n    user: Member\n    def __init__(self, vote: Vote, reaction: Reaction, user: Member):\n        self.vote = vote\n        self.reaction = reaction\n        self.user = user\n    async def add_reaction(self):\n        if self.reaction.emoji == YES_REACTION:",
+        "detail": "strategies.reaction_strategies.minor_bet_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "MultipleVoteReactionStrategy",
+        "kind": 6,
+        "importPath": "strategies.reaction_strategies.multiple_vote_strategy",
+        "description": "strategies.reaction_strategies.multiple_vote_strategy",
+        "peekOfCode": "class MultipleVoteReactionStrategy(ReactionStrategyInterface):\n    vote: Vote\n    reaction: Reaction\n    user: Member\n    def __init__(self, vote: Vote, reaction: Reaction, user: Member):\n        self.vote = vote\n        self.reaction = reaction\n        self.user = user\n    async def add_reaction(self):\n        if self.reaction.emoji == YES_REACTION:",
+        "detail": "strategies.reaction_strategies.multiple_vote_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "GraceStrategy",
+        "kind": 6,
+        "importPath": "strategies.vote_strategies.grace_strategy",
+        "description": "strategies.vote_strategies.grace_strategy",
+        "peekOfCode": "class GraceStrategy(VoteStrategyInterface):\n    interaction: Interaction\n    votebox: VoteBoxVote\n    def __init__(self, interaction: Interaction):\n        self.interaction = interaction\n        self.options = [option for option in self.interaction.data.get('options')]\n        print([option for option in self.options if option.get('name') == 'amount'])\n        self.amount = [option for option in self.options if option.get('name') == 'amount'][0]['value']\n        self.votebox = VoteBoxVote()\n        pass",
+        "detail": "strategies.vote_strategies.grace_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "PunishStrategy",
+        "kind": 6,
+        "importPath": "strategies.vote_strategies.punish_strategy",
+        "description": "strategies.vote_strategies.punish_strategy",
+        "peekOfCode": "class PunishStrategy(VoteStrategyInterface):\n    interaction: Interaction\n    votebox: VoteBoxVote\n    def __init__(self, interaction: Interaction):\n        self.interaction = interaction\n        self.options = [option for option in self.interaction.data.get('options')]\n        print([option for option in self.options if option.get('name') == 'amount'])\n        self.amount = [option for option in self.options if option.get('name') == 'amount'][0]['value']\n    def vote_owner(self) -> Member:\n        return self.interaction.user",
+        "detail": "strategies.vote_strategies.punish_strategy",
+        "documentation": {}
+    },
+    {
+        "label": "INT_EMOJI_ENUM",
+        "kind": 5,
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "peekOfCode": "INT_EMOJI_ENUM = (\n    '\\u0031\\u20e3',\n    '\\u0032\\u20e3',\n    '\\u0033\\u20e3',\n    '\\u0034\\u20e3',\n    '\\u0035\\u20e3',\n    '\\u0036\\u20e3',\n    '\\u0037\\u20e3',\n    '\\u0038\\u20e3',\n    '\\u0039\\u20e3'",
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "POOP_REACTION",
+        "kind": 5,
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "peekOfCode": "POOP_REACTION = '\\U0001F4A9'\nX_REACTION = '\\U0000274C'\nSEARCH_REACTION = '\\U0001F50D'\nYES_REACTION = '\\U00002705'",
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "X_REACTION",
+        "kind": 5,
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "peekOfCode": "X_REACTION = '\\U0000274C'\nSEARCH_REACTION = '\\U0001F50D'\nYES_REACTION = '\\U00002705'",
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "SEARCH_REACTION",
+        "kind": 5,
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "peekOfCode": "SEARCH_REACTION = '\\U0001F50D'\nYES_REACTION = '\\U00002705'",
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "YES_REACTION",
+        "kind": 5,
+        "importPath": "tools.emojis",
+        "description": "tools.emojis",
+        "peekOfCode": "YES_REACTION = '\\U00002705'",
+        "detail": "tools.emojis",
+        "documentation": {}
+    },
+    {
+        "label": "generate_hash",
+        "kind": 2,
+        "importPath": "tools.tools",
+        "description": "tools.tools",
+        "peekOfCode": "def generate_hash(n: int):\n    return base64.b64encode(secrets.token_bytes(n)).decode('utf-8')\ndef get_cmd_from_message(message: Message) -> str:\n    return message.content.split(' ')[0]\ndef get_content_from_message(message: Message, has_amount: bool) -> str:\n    mentions = get_mentions_from_message(message)\n    if has_amount:\n        dirty_message = message.content.split(' ')[:-1]\n    else:\n        dirty_message = message.content.split(' ')[1:]",
+        "detail": "tools.tools",
+        "documentation": {}
+    },
+    {
+        "label": "get_cmd_from_message",
+        "kind": 2,
+        "importPath": "tools.tools",
+        "description": "tools.tools",
+        "peekOfCode": "def get_cmd_from_message(message: Message) -> str:\n    return message.content.split(' ')[0]\ndef get_content_from_message(message: Message, has_amount: bool) -> str:\n    mentions = get_mentions_from_message(message)\n    if has_amount:\n        dirty_message = message.content.split(' ')[:-1]\n    else:\n        dirty_message = message.content.split(' ')[1:]\n    return ' '.join([x for x in dirty_message if x not in mentions])\ndef get_amount_from_message(message: Message) -> float:",
+        "detail": "tools.tools",
+        "documentation": {}
+    },
+    {
+        "label": "get_content_from_message",
+        "kind": 2,
+        "importPath": "tools.tools",
+        "description": "tools.tools",
+        "peekOfCode": "def get_content_from_message(message: Message, has_amount: bool) -> str:\n    mentions = get_mentions_from_message(message)\n    if has_amount:\n        dirty_message = message.content.split(' ')[:-1]\n    else:\n        dirty_message = message.content.split(' ')[1:]\n    return ' '.join([x for x in dirty_message if x not in mentions])\ndef get_amount_from_message(message: Message) -> float:\n    content = get_content_from_message(message, False)\n    return float(content.split(' ')[-1])",
+        "detail": "tools.tools",
+        "documentation": {}
+    },
+    {
+        "label": "get_amount_from_message",
+        "kind": 2,
+        "importPath": "tools.tools",
+        "description": "tools.tools",
+        "peekOfCode": "def get_amount_from_message(message: Message) -> float:\n    content = get_content_from_message(message, False)\n    return float(content.split(' ')[-1])\ndef get_mentions_from_message(message: Message) -> List[str]:\n    return [m.mention for m in message.mentions]",
+        "detail": "tools.tools",
+        "documentation": {}
+    },
+    {
+        "label": "get_mentions_from_message",
+        "kind": 2,
+        "importPath": "tools.tools",
+        "description": "tools.tools",
+        "peekOfCode": "def get_mentions_from_message(message: Message) -> List[str]:\n    return [m.mention for m in message.mentions]",
+        "detail": "tools.tools",
+        "documentation": {}
+    },
+    {
+        "label": "BettingUser",
+        "kind": 6,
+        "importPath": "bettinguser",
+        "description": "bettinguser",
+        "peekOfCode": "class BettingUser():\n    id: int\n    tier: int\n    claim_id: int\n    amount: float\n    user: Member | User\n    def __init__(bettingUser, user: Member, tier = 1, amount = 0):\n        bettingUser.id = user.id\n        bettingUser.user = user\n        bettingUser.tier = tier",
+        "detail": "bettinguser",
+        "documentation": {}
+    },
+    {
+        "label": "BettingUserFromMember",
+        "kind": 2,
+        "importPath": "bettinguser",
+        "description": "bettinguser",
+        "peekOfCode": "def BettingUserFromMember(user: Member | User) -> BettingUser:\n    return BettingUser(user.id, user)",
+        "detail": "bettinguser",
+        "documentation": {}
+    },
+    {
+        "label": "Claim",
+        "kind": 6,
+        "importPath": "claim",
+        "description": "claim",
+        "peekOfCode": "class Claim:\n    id: int\n    owner: BettingUser\n    minor_bettors: List[int]\n    claim_text: str\n    pot: float\n    original_pot: float\n    minor_amount: float\n    vote_weight: float\n    def __init__(self, owner: BettingUser, id: int, claim_text: str, amount: float, minorBettorModifier: int):",
+        "detail": "claim",
+        "documentation": {}
+    },
+    {
+        "label": "LiveBet",
+        "kind": 6,
+        "importPath": "livebet",
+        "description": "livebet",
+        "peekOfCode": "class LiveBet:\n    bet_box: BetBox\n    vote_box: VoteBox\n    id: str\n    message_id: int\n    creator_id: int\n    claims: List[Claim]\n    claim_count: int\n    betting_users: List[int]\n    main_bettor: List[int]",
+        "detail": "livebet",
+        "documentation": {}
+    },
+    {
+        "label": "set_bot_id",
+        "kind": 2,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "def set_bot_id(id: int):\n    global BOT_ID\n    BOT_ID = id\ndef init_balance(user: Member):\n    if user.id not in bank.balances:\n        bank.init_balance(user.id, float(INIT_BALANCE))\n@bot.command(name='balance')\nasync def balance(ctx: discord.Interaction):\n    mentions = ctx.message.mentions\n    if mentions:",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "init_balance",
+        "kind": 2,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "def init_balance(user: Member):\n    if user.id not in bank.balances:\n        bank.init_balance(user.id, float(INIT_BALANCE))\n@bot.command(name='balance')\nasync def balance(ctx: discord.Interaction):\n    mentions = ctx.message.mentions\n    if mentions:\n        for mention in mentions:\n            init_balance(mention.id)\n            member_balance = bank.balances[mention.id]",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "interaction_to_mentions",
+        "kind": 2,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "def interaction_to_mentions(interaction: discord.Interaction) -> List[Member]:\n    try:\n        users = next((option for option in interaction.data.get('options') if option['name'] == 'users'), None)['value'].split(' ')\n        members = [discord.utils.get(interaction.guild.members, mention=user) for user in users]\n        return members\n    except Exception as e:\n        print(e)\n@bot.command(name='resolve')\nasync def resolve(ctx: discord.Interaction):\n    message = ctx.message",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "add_to_balance",
+        "kind": 2,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "def add_to_balance(user_id: int, amount: float):\n    bank.balances[user_id] += amount\n    return\nasync def make_bet_out_of_context(interaction: discord.Interaction) -> LiveBet:\n    thread = next((option for option in interaction.data.get(\"options\") if option['name'] == 'thread'), None)[\"value\"]\n    bet = LiveBet(interaction.user.id, thread)\n    await bet.init_boxes(interaction) #NEED CONTEXT TO PRINT BOX\n    return bet\nasync def claim_from_reply(message: Message):\n    bet_message = message.reference.resolved",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "get_bet_from_reply",
+        "kind": 2,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "def get_bet_from_reply(message: Message) -> LiveBet:\n    #TODO: MAKE SURE WE ONLY TREAT REPLIES TO BETS\n    message = message.reference.resolved\n    if message.embeds:\n        return bank.get_bet_from_message_id(message.id)\n    raise Exception\nasync def numerical_reaction_handle(reaction: Reaction, user: Member):\n    if reaction.message.id in bank.votebox_message_id:\n        print(\"ADD VOTE\")\n        pass",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "intents",
+        "kind": 5,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "intents = discord.Intents.default()\nintents.message_content = True\nbot = commands.Bot(command_prefix='!', intents=discord.Intents.all())\n#Liliane Bet-en-cours\n# define a dictionary to store user balances\nbank = Bank()\nload_dotenv()\ngoogle_api_limiter = Counter()\nBOT_ID = None\nINIT = True",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "intents.message_content",
+        "kind": 5,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "intents.message_content = True\nbot = commands.Bot(command_prefix='!', intents=discord.Intents.all())\n#Liliane Bet-en-cours\n# define a dictionary to store user balances\nbank = Bank()\nload_dotenv()\ngoogle_api_limiter = Counter()\nBOT_ID = None\nINIT = True\nuser_cache: List[int] = []",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "bot",
+        "kind": 5,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())\n#Liliane Bet-en-cours\n# define a dictionary to store user balances\nbank = Bank()\nload_dotenv()\ngoogle_api_limiter = Counter()\nBOT_ID = None\nINIT = True\nuser_cache: List[int] = []\n# define a list to store betting history",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "bank",
+        "kind": 5,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "bank = Bank()\nload_dotenv()\ngoogle_api_limiter = Counter()\nBOT_ID = None\nINIT = True\nuser_cache: List[int] = []\n# define a list to store betting history\nbet_history: List[Dict[int, LiveBet]] = {}\n@bot.event\nasync def on_ready():",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "google_api_limiter",
+        "kind": 5,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "google_api_limiter = Counter()\nBOT_ID = None\nINIT = True\nuser_cache: List[int] = []\n# define a list to store betting history\nbet_history: List[Dict[int, LiveBet]] = {}\n@bot.event\nasync def on_ready():\n    channel = bot.get_channel(TESTING_CH_GENERAL)\n    try:",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "BOT_ID",
+        "kind": 5,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "BOT_ID = None\nINIT = True\nuser_cache: List[int] = []\n# define a list to store betting history\nbet_history: List[Dict[int, LiveBet]] = {}\n@bot.event\nasync def on_ready():\n    channel = bot.get_channel(TESTING_CH_GENERAL)\n    try:\n        if INIT:",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "INIT",
+        "kind": 5,
+        "importPath": "SERVER",
+        "description": "SERVER",
+        "peekOfCode": "INIT = True\nuser_cache: List[int] = []\n# define a list to store betting history\nbet_history: List[Dict[int, LiveBet]] = {}\n@bot.event\nasync def on_ready():\n    channel = bot.get_channel(TESTING_CH_GENERAL)\n    try:\n        if INIT:\n            await bot.tree.sync()",
+        "detail": "SERVER",
+        "documentation": {}
+    },
+    {
+        "label": "document",
+        "kind": 5,
+        "importPath": "so",
+        "description": "so",
+        "peekOfCode": "document = {\n    'users': [\n        {\n            'id': 'zzz',\n            'name': 'zzz',\n            'balance': 'zzz',\n            'punish_count': 'kkk',\n            'grace_count': 'zzz',\n        },\n    ],",
+        "detail": "so",
+        "documentation": {}
+    },
+    {
+        "label": "Vote",
+        "kind": 6,
+        "importPath": "vote",
+        "description": "vote",
+        "peekOfCode": "class Vote:\n    vote_strategy: VoteStrategyInterface\n    votebox: VoteBoxVote\n    voters: List[int]\n    yay: int\n    nay: int\n    is_resolved: bool\n    def __init__(self, vote_strategy: VoteStrategyInterface, votebox: VoteBoxVote):\n        self.yay = 1\n        self.nay = 0",
+        "detail": "vote",
+        "documentation": {}
+    }
+]

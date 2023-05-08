@@ -1,9 +1,10 @@
 from bettinguser import BettingUser
 from typing import List
 from claim import Claim
+from discord import Interaction
 from discord.ext.commands import Context
 from embeds.betbox import BetBox
-from embeds.votebox import VoteBox
+from embeds.votebox_bet import VoteBox
 from tools.tools import *
 from engines.factchecker import FactChecker
 
@@ -25,9 +26,9 @@ class LiveBet:
     winning_claim: int
     pot: float
     
-    def __init__(self, ctx: Context, thread: str):
+    def __init__(self, user_id: int, thread: str):
         hash_id = generate_hash(8)
-        self.creator_id = ctx.author.id
+        self.creator_id = user_id
         self.claims = []
         self.betting_users = []
         self.thread = thread
@@ -59,11 +60,11 @@ class LiveBet:
             return True
         return False
     
-    async def init_boxes(self, ctx: Context):
-        self.bet_box = BetBox(ctx, self.id, self.thread)
-        await self.bet_box.print(ctx)
+    async def init_boxes(self, interaction: Interaction):
+        self.bet_box = BetBox(interaction.user.nick, self.id, self.thread)
+        await self.bet_box.print(interaction.channel)
         self.vote_box = VoteBox(self.id)
-        await self.vote_box.print(ctx)
+        await self.vote_box.print(interaction.channel)
         self.message_id = self.bet_box.message.id
         
     async def set_box_footers(self):

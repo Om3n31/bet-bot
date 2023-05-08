@@ -8,8 +8,8 @@ class BettingUser():
     claim_id: int
     amount: float
     user: Member | User
-    def __init__(bettingUser, id: int, user: Member,tier = 1, amount = 0):
-        bettingUser.id = id
+    def __init__(bettingUser, user: Member, tier = 1, amount = 0):
+        bettingUser.id = user.id
         bettingUser.user = user
         bettingUser.tier = tier
         bettingUser.amount = amount
