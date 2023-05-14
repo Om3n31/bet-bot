@@ -8,17 +8,17 @@ class BettingUser():
     claim_id: int
     amount: float
     user: Member | User
-    def __init__(bettingUser, user: Member, tier = 1, amount = 0):
-        bettingUser.id = user.id
-        bettingUser.user = user
-        bettingUser.tier = tier
-        bettingUser.amount = amount
+    def __init__(self, user: Member, tier = 1, amount = 0):
+        self.id = user.id
+        self.user = user
+        self.tier = tier
+        self.amount = amount
         
-    def set_id(bettingUser, id: int):
-        bettingUser.id = id
-    def set_user(bettingUser, user: Member | User):
-        bettingUser.user = user
+    def set_id(self, id: int):
+        self.id = id
+    def set_user(self, user: Member | User):
+        self.user = user
 #TO GET THE CLAIM, USE THE CLAIM_ID AND FETCH IT FROM LIVEBET
 @staticmethod
 def BettingUserFromMember(user: Member | User) -> BettingUser:
-    return BettingUser(user.id, user)
+    return BettingUser(user)

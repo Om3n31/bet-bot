@@ -9,7 +9,7 @@ class BetBox(Embed):
     def __init__(self, author_nick: str, bet_id: str, thread: str):
         super().__init__(title=f"", description=f"", color=0xd4af37)
         self.bet_id = bet_id
-        self.add_field(name=f"@{author_nick} started a new bet:", value=f"```{thread}\n```", inline=False)
+        self.add_field(name=f"{author_nick} started a new bet:", value=f"```{thread}\n```", inline=False)
         
     async def add_claim(self, claim_id: int, user_name: str, amount: float, claim_text: str):
         self.add_field(name="", value=f"```{claim_id+1} - {user_name} for {amount}\n{claim_text}```", inline=False)

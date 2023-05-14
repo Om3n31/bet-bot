@@ -71,6 +71,9 @@ class LiveBet:
         await self.bet_box.post_claim_footer()
         await self.vote_box.post_claim_footer()
     
+    async def prepare_amount_from_reaction(self):
+        pass
+    
     def add_main_bettor(self, main_bettor: BettingUser):
         self.main_bettor.append(main_bettor.id)
         print(f"Added main bettor {main_bettor.user.nick} ({main_bettor.id}) to bet {self.id}")
@@ -99,6 +102,18 @@ class LiveBet:
             
     def get_claim(self, claim_id: int) -> Claim:
         return self.claims[claim_id]
+    
+    def has_user_claimed(self, user_id: int) -> bool:
+        for claim in self.claims:
+            if claim.has_user_claimed(user_id):
+                return True
+        return False
+    
+    def user_claim(self, user_id: int) -> Claim | None:
+        for claim in self.claims:
+            if claim.has_user_claimed(user_id):
+                return claim
+        return None
     
     def set_pot(self, amount: float):
         self.pot = amount

@@ -21,13 +21,14 @@ from strategies.vote_strategies.grace_strategy import GraceStrategy
 from strategies.reaction_strategies.binary_vote_strategy import BinaryVoteReactionStrategy
 
 from vote import Vote
+from reactables.betbox_reactable import BetBoxReactable
+from reactables.bet_votebox_reactable import BetVoteboxReactable
 
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 #Liliane Bet-en-cours
 # define a dictionary to store user balances
-bank = Bank()
 load_dotenv()
 google_api_limiter = Counter()
 BOT_ID = None
@@ -52,12 +53,21 @@ def set_bot_id(id: int):
     global BOT_ID
     BOT_ID = id
 
+@bot.tree.command(name='init_balance')
+async def init_balance_command(interaction: discord.Interaction):
+    bank = Bank()
+    if interaction.user.id not in bank.balances:
+        bank.init_balance(interaction.user.id, float(INIT_BALANCE))
+
+#TODO: REMOVE  
 def init_balance(user: Member):
+    bank = Bank()
     if user.id not in bank.balances:
         bank.init_balance(user.id, float(INIT_BALANCE))
         
 @bot.command(name='balance')
 async def balance(ctx: discord.Interaction):
+    bank = Bank()
     mentions = ctx.message.mentions
     if mentions:
         for mention in mentions:
@@ -71,23 +81,32 @@ async def balance(ctx: discord.Interaction):
 
 @bot.tree.command(name="bet")
 async def bet(interaction: discord.Interaction, thread: str, users: str = None):
+    bank = Bank()
+    init_balance(interaction.user)
     bet = await make_bet_out_of_context(interaction)
     mentions = interaction_to_mentions(interaction)
-    if len(mentions) > 0:
+    interaction = interaction
+    if mentions is not None:
         for user in mentions:
             init_balance(user)
             if user.id not in bet.betting_users:
                 betting_user = BettingUserFromMember(user)
                 bet.add_main_bettor(betting_user)
+    
+    bank.register_reactable(BetBoxReactable(bet))
+    bank.register_reactable(BetVoteboxReactable(bet))
     bank.register_bet(bet)
+    await bet.bet_box.message.create_thread(name=f"Add claims in this thread.")
+    await interaction.response.send_message(delete_after=1., content="Bet registered.")
 
-def interaction_to_mentions(interaction: discord.Interaction) -> List[Member]:
+def interaction_to_mentions(interaction: discord.Interaction) -> List[Member] | None:
     try:
         users = next((option for option in interaction.data.get('options') if option['name'] == 'users'), None)['value'].split(' ')
         members = [discord.utils.get(interaction.guild.members, mention=user) for user in users]
         return members
     except Exception as e:
-        print(e)
+        print("Could not get mentions")
+        return None
 
 @bot.command(name='resolve')
 async def resolve(ctx: discord.Interaction):
@@ -144,6 +163,7 @@ async def punish(interaction: discord.Interaction, users: str, amount: str):
     vote = Vote(vote_strategy=PunishStrategy(interaction), votebox=VoteBoxVote())
     await vote.vote_box.set_content(vote.vote_strategy, interaction.channel)
     await vote.vote_box.add_vote_slot()
+    bank = Bank()
     bank.register_vote(vote, vote.vote_box.message.id)
    
 @bot.tree.command(name='grace')
@@ -151,9 +171,32 @@ async def grace(interaction: discord.Interaction, users: str, amount: str):
     vote = Vote(vote_strategy=GraceStrategy(interaction), votebox=VoteBoxVote())
     await vote.vote_box.set_content(vote.vote_strategy, interaction.channel)
     await vote.vote_box.add_vote_slot()
+    bank = Bank()
     bank.register_vote(vote, vote.vote_box.message.id)
-    
+
+@bot.tree.command(name="claim")
+async def claim(interaction: discord.Interaction, claim: str, amount: str):
+    bank = Bank()
+    reactable = bank.get_reactable(interaction.channel_id)
+    if not isinstance(interaction.channel, discord.Thread) or reactable is None:
+        return
+    if await reactable.on_reply(interaction.user, claim, amount, 'add_claim'):
+        await interaction.response.send_message(content=f"Not enough balance, {interaction.user.mention}")
+        return
+    await interaction.response.send_message(delete_after=0., content="Claim registered.")
+
+@bot.tree.command(name="joinclaim")
+async def claim(interaction: discord.Interaction, claim: str, amount: str):
+    bank = Bank()
+    reactable = bank.get_reactable(interaction.channel_id)
+    if not isinstance(interaction.channel, discord.Thread) or reactable is None:
+        return
+    await bank.get_reactable(interaction.channel_id).on_reply(interaction.user, claim, amount, 'join_claim')
+    await interaction.response.send_message(delete_after=0., content="Claim registered.")
+
+
 def add_to_balance(user_id: int, amount: float):
+    bank = Bank()
     bank.balances[user_id] += amount
     return
 
@@ -164,6 +207,13 @@ async def make_bet_out_of_context(interaction: discord.Interaction) -> LiveBet:
     return bet
 
 async def claim_from_reply(message: Message):
+    bank = Bank()
+    reactable = bank.get_reactable(message.reference.resolved.id)
+    if not reactable.can_reply(message):
+        print("Cannot reply")
+        return
+    if not await reactable.on_reply(message):
+        message.channel.send(f"Not enough balance, {message.author}")
     bet_message = message.reference.resolved
     bet = get_bet_from_reply(message)
     if bet.is_resolved:
@@ -193,6 +243,7 @@ async def claim_from_reply(message: Message):
         raise e
 
 def get_bet_from_reply(message: Message) -> LiveBet:
+    bank = Bank()
     #TODO: MAKE SURE WE ONLY TREAT REPLIES TO BETS
     message = message.reference.resolved
     if message.embeds:
@@ -200,6 +251,7 @@ def get_bet_from_reply(message: Message) -> LiveBet:
     raise Exception
 
 async def numerical_reaction_handle(reaction: Reaction, user: Member):
+    bank = Bank()
     if reaction.message.id in bank.votebox_message_id:
         print("ADD VOTE")
         pass
@@ -209,7 +261,7 @@ async def numerical_reaction_handle(reaction: Reaction, user: Member):
         if bet.is_resolved or user.id in bet.betting_users:
             await reaction.message.remove_reaction(reaction.emoji, user)
             return
-        betting_user = BettingUser(user.id, user)
+        betting_user = BettingUser(user)
         init_balance(user)
         if bet.add_minor_bettor(betting_user, index):
             bank.balances[betting_user.id] -= bet.get_claim(index).minor_amount
@@ -217,19 +269,21 @@ async def numerical_reaction_handle(reaction: Reaction, user: Member):
 
 @bot.event
 async def on_message(message: Message):
+    if message.author.id == BOT_ID:
+        return
     if message.author.id not in user_cache and message.author.name != BOT_NAME:
         await Database().insert_user(message.author)
         user_cache.append(message.author.id)
     init_balance(message.author)
-    if len(message.content) > 0 and message.content[0] == '!':
-        await bot.process_commands(message)
-        return
-    if message.reference is None or message.reference.resolved.author.name != BOT_NAME:
-        return
-    if message.reference.resolved.author.name == BOT_NAME:
-        await claim_from_reply(message)
-        return
-    bot.process_commands(message)
+    # if message.reference is None or message.reference.resolved.author.name != BOT_NAME:
+    #     return
+    # if message.reference.resolved.author.name == BOT_NAME:
+    #     bank = Bank()
+    #     original_message = message.reference.resolved
+    #     await bank.get_reactable(original_message.id).on_reply(message)
+    #     await claim_from_reply(message)
+    #     return
+    await bot.process_commands(message)
     
 @bot.event
 async def on_command_error(ctx: discord.Interaction, error):
@@ -240,27 +294,45 @@ async def on_command_error(ctx: discord.Interaction, error):
         if ctx.command.name == 'claim':
             await ctx.message.reply("To make a claim on a bet: ```!claim \"Je pense que Quentin est incapable de manger 100 nuggets en une heure.\" 3000 ru6r0VnR -> (Bet code)```If a claim already exists, you need to join the bet on a already existing claim, by reacting with the claim's number.")
 
+# @bot.event
+# async def on_reaction_add(reaction: Reaction, user: Member):
+#     bank = Bank()
+#     message_id = reaction.message.id
+#     #from message_id get reactable
+#     original_message_author_id = reaction.message.author.id
+#     if original_message_author_id == BOT_ID and user.id != BOT_ID:
+#         bet = bank.get_bet_from_message_id(message_id)
+#         if reaction.emoji in INT_EMOJI_ENUM:
+#             await numerical_reaction_handle(reaction, user)      
+#         if reaction.emoji == SEARCH_REACTION:
+#             if bet.is_resolved or bet.is_searched or not google_api_limiter.can_search_google():
+#                 await reaction.message.remove_reaction(reaction.emoji, user)
+#                 return
+#             await bet.display_result()
+#             bet.is_searched = True
+#         pass
+
 @bot.event
-async def on_reaction_add(reaction: Reaction, user: Member):
-    message_id = reaction.message.id
-    original_message_author_id = reaction.message.author.id
-    if original_message_author_id == BOT_ID and user.id != BOT_ID:
-        bet = bank.get_bet_from_message_id(message_id)
-        if reaction.emoji in INT_EMOJI_ENUM:
-            await numerical_reaction_handle(reaction, user)      
-        if reaction.emoji == SEARCH_REACTION:
-            if bet.is_resolved or bet.is_searched or not google_api_limiter.can_search_google():
-                await reaction.message.remove_reaction(reaction.emoji, user)
-                return
-            await bet.display_result()
-            bet.is_searched = True
-        pass
+async def on_raw_reaction_add(event: RawReactionActionEvent):
+    if event.user_id == bot.user.id:
+        return
+    bank = Bank()
+    reactable = bank.get_reactable(event.message_id)
+    if reactable is None or not reactable.can_react(event):
+        message = await bot.get_channel(event.channel_id).fetch_message(event.message_id)
+        await message.remove_reaction(event.emoji, event.member)
+        return
+    reactable.on_add_reaction(event)
 
 @bot.event
 async def on_raw_reaction_remove(event: RawReactionActionEvent):
+    if event.user_id == bot.user.id:
+        return
+    bank = Bank()
     channel = bot.get_channel(event.channel_id)
     message = await channel.fetch_message(event.message_id)
     bet_id = message.id
+    #TODO: CLEAN THIS UP
     if event.user_id != BOT_ID and bet_id in bank.bets:
         if event.emoji.name in INT_EMOJI_ENUM:
             index = INT_EMOJI_ENUM.index(event.emoji.name)

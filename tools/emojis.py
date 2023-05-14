@@ -13,3 +13,19 @@ POOP_REACTION = '\U0001F4A9'
 X_REACTION = '\U0000274C'
 SEARCH_REACTION = '\U0001F50D'
 YES_REACTION = '\U00002705'
+
+BET_AMOUNT_ENUM = (
+    '🔸',
+    '🔶',
+    '🟧',
+)
+
+AMOUNT_EMOJI_VALUES = (
+    25,
+    50,
+    100
+)
+
+ADD_25_REACTION = '🔸'
+ADD_50_REACTION = '🔶'
+ADD_100_REACTION = '🟧'
